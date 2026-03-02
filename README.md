@@ -1,4 +1,4 @@
-# 💼 Portfólio Backend Developer (Next.js)
+# 💼 Portfólio Backend Developer 
 
 [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org/)
