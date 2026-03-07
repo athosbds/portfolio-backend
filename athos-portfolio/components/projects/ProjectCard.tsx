@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Github, ExternalLink } from 'lucide-react'
+import { Github, ExternalLink, Lock } from 'lucide-react'
 import type { Project } from '@/lib/projects'
 import Image from 'next/image'
 
@@ -21,7 +21,7 @@ export function ProjectCard({ project }: { project: Project }) {
       )}
 
       <CardHeader>
-        {/* TÍTULO AGORA É UM LINK */}
+        {/* Título é um link */}
         <Link href={`/projects/${project.id}`}>
           <CardTitle className="text-xl hover:text-blue-600 transition-colors cursor-pointer">
             {project.title}
@@ -33,36 +33,47 @@ export function ProjectCard({ project }: { project: Project }) {
       </CardHeader>
 
       <CardContent className="flex flex-wrap gap-2">
-        {project.tech.map((tech) => (
+        {project.tech.slice(0, 5).map((tech) => (
           <Badge key={tech} variant="secondary" className="text-xs">
             {tech}
           </Badge>
         ))}
+        {project.tech.length > 5 && (
+          <Badge variant="outline" className="text-xs">
+            +{project.tech.length - 5}
+          </Badge>
+        )}
       </CardContent>
 
       <CardFooter className="gap-3">
-        {project.github && (
+        {project.github ? (
           <a
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+            title={project.github ? "Ver código no GitHub" : "Repositório privado"}
           >
             <Github className="w-4 h-4" />
-            GitHub
+            <span className="hidden sm:inline">GitHub</span>
           </a>
-        )}
-        {project.live && (
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+        ) : (
+          <span 
+            className="flex items-center gap-1.5 text-sm text-gray-400 cursor-not-allowed"
+            title="Repositório privado"
           >
-            <ExternalLink className="w-4 h-4" />
-            Demo
-          </a>
+            <Lock className="w-4 h-4" />
+            <span className="hidden sm:inline">Privado</span>
+          </span>
         )}
+        
+        <Link 
+          href={`/projects/${project.id}`}
+          className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors ml-auto"
+        >
+          <span className="hidden sm:inline">Detalhes</span>
+          <ExternalLink className="w-4 h-4" />
+        </Link>
       </CardFooter>
     </Card>
   )
