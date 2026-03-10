@@ -139,8 +139,10 @@ export const projects: Project[] = [
   {
     id: 'tripeasy',
     title: 'Tripeasy',
-    description: 'Sistema de venda de ingressos com geração de QR Codes únicos, validação em tempo real e containerização com Docker.',
+    description: 'Sistema de venda de ingressos com geração de QR Codes únicos, validação em tempo real e containerização com Docker. Projeto desenvolvido e inscrito no South Summit Madrid 2026.',
     fullDescription: `Sistema completo para venda de ingressos com integração PIX e QR Code. O projeto foi desenvolvido como MVP funcional, com foco em simplicidade e eficiência, demonstrando boas práticas de desenvolvimento com FastAPI.
+
+    O Tripeasy foi **desenvolvido e inscrito no South Summit Madrid 2026**, uma das principais conferências de inovação e empreendedorismo da Europa, que conecta startups a investidores e grandes corporações globais. A participação no South Summit representa uma oportunidade de ganhar visibilidade internacional e validar a solução em um dos maiores ecossistemas de inovação do mundo.
 
     Implementa fluxo completo desde a criação do pedido até a validação do ingresso na entrada do evento, com geração de QR Codes únicos e validação em tempo real.`,
     features: [
@@ -152,20 +154,24 @@ export const projects: Project[] = [
       'Containerização com Docker para fácil deploy',
       'Health checks e monitoramento básico',
       'Endpoints documentados com OpenAPI/Swagger',
+      '📌 Projeto desenvolvido e inscrito no South Summit Madrid 2026',
     ],
     challenges: [
       'Garantir unicidade dos QR Codes em alta escala (colisão de hashes)',
       'Validação em tempo real com baixa latência (< 200ms)',
       'Estruturar banco para consultas rápidas por QR Code',
       'Implementar sistema de check-in que previna uso duplicado',
+      'Preparar documentação e inscrição para o South Summit Madrid 2026',
     ],
     architecture: 'Monolito modular com FastAPI, banco PostgreSQL e containers Docker para deploy simplificado. Armazenamento inicial em memória migrado para PostgreSQL.',
     tech: ['FastAPI', 'Python 3.11', 'PostgreSQL', 'SQLAlchemy', 'Docker', 'QR Code', 'JWT', 'Pydantic'],
     github: 'https://github.com/athos/tripeasy-backend',
     image: '/images/tripeasy.png',
     en: {
-      description: 'Ticket sales system with unique QR Code generation, real-time validation, and Docker containerization.',
+      description: 'Ticket sales system with unique QR Code generation, real-time validation, and Docker containerization. Project developed and submitted to South Summit Madrid 2026.',
       fullDescription: `Complete ticket sales system with PIX and QR Code integration. Developed as a functional MVP focused on simplicity and efficiency, showcasing FastAPI best practices.
+
+    Tripeasy was **developed and submitted to South Summit Madrid 2026**, one of Europe's leading innovation and entrepreneurship conferences, connecting startups with investors and global corporations. Participating in South Summit represents an opportunity to gain international visibility and validate the solution in one of the world's largest innovation ecosystems.
 
     Implements the full flow from order creation to ticket validation at the venue entrance, with unique QR Code generation and real-time check-in validation.`,
       features: [
@@ -177,6 +183,7 @@ export const projects: Project[] = [
         'Docker containerization for easy deployment',
         'Health checks and basic monitoring',
         'Endpoints documented with OpenAPI/Swagger',
+        '📌 Project developed and submitted to South Summit Madrid 2026',
       ],
       architecture: 'Modular monolith with FastAPI, PostgreSQL, and Docker containers for simplified deployment. Initial in-memory storage migrated to PostgreSQL.',
     },
