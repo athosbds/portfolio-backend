@@ -154,6 +154,7 @@ export const projects: Project[] = [
       'Containerização com Docker para fácil deploy',
       'Health checks e monitoramento básico',
       'Endpoints documentados com OpenAPI/Swagger',
+      'Integração com Strapi Cloud utilizando componentes dinâmicos para modelagem de conteúdo',
       '📌 Projeto desenvolvido e inscrito no South Summit Madrid 2026',
     ],
     challenges: [
@@ -183,6 +184,7 @@ export const projects: Project[] = [
         'Docker containerization for easy deployment',
         'Health checks and basic monitoring',
         'Endpoints documented with OpenAPI/Swagger',
+        'Strapi Cloud integration using dynamic components for flexible content modeling',
         '📌 Project developed and submitted to South Summit Madrid 2026',
       ],
       architecture: 'Modular monolith with FastAPI, PostgreSQL, and Docker containers for simplified deployment. Initial in-memory storage migrated to PostgreSQL.',

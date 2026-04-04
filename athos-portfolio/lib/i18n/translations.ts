@@ -71,11 +71,11 @@ export const translations: Record<Language, Translations> = {
         },
         {
           title: '🐳 DevOps & Infra',
-          items: ['Docker', 'VPS, Linux, SSH', 'Git, GitHub', 'Gerenciamento de processos', 'Monitoramento básico'],
+          items: ['Docker', 'VPS, Linux, SSH', 'Git, GitHub', 'Gerenciamento de processos', 'Monitoramento básico', ],
         },
         {
           title: '📄 Arquitetura',
-          items: ['APIs RESTful', 'Webhooks', 'Filas assíncronas', 'Organização modular', 'Documentação OpenAPI'],
+          items: ['Integração com CMS headless (Strapi Cloud)','APIs RESTful', 'Webhooks', 'Filas assíncronas', 'Organização modular', 'Documentação OpenAPI'],
         },
       ],
     },
@@ -137,7 +137,7 @@ export const translations: Record<Language, Translations> = {
         },
         {
           title: '📄 Architecture',
-          items: ['RESTful APIs', 'Webhooks', 'Async queues', 'Modular organization', 'OpenAPI documentation'],
+          items: ['Headless CMS integration (Strapi Cloud)', 'RESTful APIs', 'Webhooks', 'Async queues', 'Modular organization', 'OpenAPI documentation'],
         },
       ],
     },
